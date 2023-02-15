@@ -1,0 +1,22 @@
+import math
+
+def myDistance(x, y):
+    distance = math.sqrt(x ** 2 + y ** 2)
+    print(distance)
+def betweenDistance(x_1, y_1, x_2, y_2):
+    distance = math.sqrt((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2)
+    print(distance)
+
+choise = input('1 - надо узнать расстояние до точки, 2 - если нужно узнать расстояние от точки до точки' )
+if choise == 1:
+    x = int(input('Введите значение икс: '))
+    y = int(input('Введите значение игрек: '))
+    myDistance(x, y)
+elif choise == 2:
+    x_1 = int(input('Введите значение икс первой точки: '))
+    x_2 = int(input('Введите значение икс второй точки: '))
+    y_1 = int(input('Введите значение игрек первой точки: '))
+    y_2 = int(input('Введите значение игрек второй точки: '))
+    betweenDistance(x_1, y_1, x_2, y_2)
+else:
+    print('Ошибка ввода!')
